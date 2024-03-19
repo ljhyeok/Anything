@@ -8,3 +8,18 @@ ts 파일이 실행되고, es 모듈이 되는 점이 너무 편리하다. 다�
 
 * ES 모듈 지원
 * TypeScript
+
+## deno 설치
+
+```bash
+brew install deno
+```
+
+## deno package manager
+nvm처럼 deno 버전 관리 매니저가 존재한다.
+
+[asdf](https://asdf-vm.com/)란 매니저이다.
+
+```bash
+brew install asdf
+```
