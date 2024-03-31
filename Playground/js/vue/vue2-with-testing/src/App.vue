@@ -8,7 +8,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import CountButton from './components/CountButton.vue'
+import CountButton from './components/CounterButton.vue'
 
 
 export default {
