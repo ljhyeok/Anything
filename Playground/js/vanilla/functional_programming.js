@@ -143,3 +143,34 @@ function _reduce(list, iter, memo) {
 // console.log(_reduce([1, 2], function (a, b) {
 //   return a + b;
 // }));
+
+// keys 구현
+function _is_object(obj) {
+  return typeof obj === "object" && !!obj;
+}
+
+function _keys(obj) {
+  return _is_object(obj) ? Object.keys(obj) : [];
+}
+
+var _length = _get("length");
+
+function _each(list, iter) {
+  var keys = _keys(list);
+  for (var i = 0, len = keys.length; i < len; i++) {
+    iter(list[keys[i]])
+  }
+  return list;
+}
+
+_each({
+  13: "ID",
+  7: "HD",
+  29: "JD"
+}, function (name) {
+  console.log(name);
+})
+
+_each([1, 2, 3, 4], function (value) {
+  console.log(value);
+}) 
