@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "serve": "deno run fn_prgm_playground.js",
+    "test": "deno test fn_prgm_playground.js"
+  },
   "dependencies": {
     "lodash": "^4.17.21"
   }
