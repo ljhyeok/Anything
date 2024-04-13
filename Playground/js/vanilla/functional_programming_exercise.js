@@ -11,9 +11,6 @@ export function sample() {
  * 그게 아니면, 리턴 함수의 리턴으로 함수를 정의하고 해당 함수의 리턴 값으로 outer 함수의 인자로 받은 함수의 실행 결과 값을 전달
  */
 export function _curry(fn) {
-  return function (a, b) {
-    // TODO
-  }
 }
 
 /**
@@ -22,23 +19,18 @@ export function _curry(fn) {
  * @returns 
  */
 export function _curryr(fn) {
-  return function (a, b) {
-    // TODO
-  }
 }
 
 // TODO: 객체의 key값을 인자로 받으면, value를 가져오는 함수 정의
-// export var _get;
+export var _get = _curryr(function (obj, key) {
+});
 
 // 두 번째 인자로 받은 함수를 통해, 해당 조건에 맞는 값들을 리턴하는 함수
 export function _filter(list, predi) {
-  console.log("test");
-  // TODO
 }
 
 // 두 번째 인자로 받은 함수를 통해, 해당 함수 실행 결과에 맞는 값을 리턴하는 함수
 export function _map(list, mapper) {
-  // TODO
 }
 
 /**
@@ -46,21 +38,18 @@ export function _map(list, mapper) {
  * @param {*} obj 
  */
 export function _is_object(obj) {
-  // TODO
 }
 
 /**
  * 객체의 키 값을 가져오는 함수
  */
 export function _keys(obj) {
-  // TOO
 }
 
 // export var _length = _get('length');
 
 // 순회하면서 함수를 실행시키는 함수
 export function _each(list, iter) {
-  // TOO
 }
 
 
@@ -71,17 +60,14 @@ export function _rest(list, num) {
 
 // 순회하면서 함수를 실행시키고, 해당 결과 값을 memoization하여 리턴하는 함수
 export function _reduce(list, iter, memo) {
-  // TODO
 }
 
 // 함수를 인자로 여러개 받아서 순차적으로 실행 시키는 함수
 export function _pipe() {
-  // TODO
 }
 
 // 인자를 받아 결과를 바로 산출해내는 함수
 export function _go(arg) {
-  // TODO
 }
 
 var _values = _map(_identity);
@@ -91,7 +77,8 @@ export function _identity(val) {
 }
 
 // 키 값을 받아서 해당 값만 가져오는 함수 
-// export var _pluck = 
+export var _pluck = _curryr(function (data, key) {
+});
 
 /**
  * 예측 하는 함수의 반대되는 결과 값을 반환
@@ -99,29 +86,43 @@ export function _identity(val) {
  * @returns 
  */
 export function _negate(func) {
-  // TODO
 }
 
 // 예상 함수 리턴 값의 반대되는 값들만 가져옴
-// export var _reject = 
+export var _reject = _curryr(function (data, predi) {
+})
 
 // 유효한 값만 가져오는 함수
-// export var _compact = 
+export var _compact = _filter(_identity)
 
 // 찾고자 하는 것의 첫번째 값만 가져오는 함수
-// var _find = 
+export var _find = _curryr(function (list, predi) {
+});
 
 // 찻고자 하는 것의 첫번째 인덱스를 리턴해주는 함수
-// var _find_index =
+export var _find_index = _curryr(function (list, predi) {
+});
 
 // 만족하는 조건이 하나라도 있는지 확인하는 함수
 export function _some(data, predi) {
-  TODO
 }
 
 // 모든 조건을 만족하는지 체크하는 함수
 export function _every(data, predi) {
-
 }
 
+export function _push(obj, key, val) {
+}
 
+export var _group_by = _curryr(function (data, iter) {
+});
+
+
+export var _inc = function (count, key) {
+};
+
+export var _count_by = _curryr(function (data, iter) {
+});
+
+export var _head = function (list) {
+};
